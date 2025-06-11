@@ -1,0 +1,96 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    width:100%;
+    min-width: 100vh;
+    height: 100vh;
+    background: black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    gap:50px;
+}
+.countHead{
+    width:600px;
+    padding:10px 20px;
+    border:3px solid gray;
+   border-radius: 5px;
+ display:flex;
+ justify-content: space-between;
+ align-items: center;
+}
+.countHead h2{
+    font-size: 30px;
+    font-weight: 500;
+    color:ghostwhite;
+}
+.counterNumber{
+    width:150px;
+    height:150px;
+    border:2px solid greenyellow;
+    font-size:30px;
+    font-weight:500;
+    color:ghostwhite;
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.todoHead{
+    width:600px;
+    border:2px solid gray;
+    display:flex;
+    justify-content:space-between;
+}
+.todoHead input{
+    width:70%;
+    height:40px;
+    border:none;
+    outline:none;
+    background: transparent;
+    padding-left: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    color:ghostwhite;
+}
+.todoHead button{
+    width:40px;
+    border:none;
+    font-size:20px;
+    
+}
+.singleToDoDiv{
+    width:600px;
+    height:40px;
+    border:2px solid gray;
+    border-radius: 10px;
+    display:flex;
+    justify-content: space-between;
+margin-top:20px;
+}
+.singleToDoDiv button{
+    width:40px;
+}
+.editButton{
+    background: goldenrod;
+    color:white;
+}
+.deleteButton{
+    background: red;
+}
+.doneButton{
+    background: green;
+}
+.singleToDoDiv input{
+    width:80%;
+    outline:none;
+    background: transparent;
+    border:none;
+    font-size:20px;
+    color:white;
+    padding-left: 20px;
+}

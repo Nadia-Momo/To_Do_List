@@ -4,8 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To do list</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
 </head>
 <body>
-    
+    <!-- to do head count -->
+<div class="countHead">
+<h2>Todo</h2>
+<div class="counterNumber"> 
+    <span>0</span>
+    /
+    <span>5</span>
+</div>
+</div>  
+<div class="todoHead">
+    <input class="todoheadInput" placeholder="Enter your todo" type="text">
+    <button onclick="handleAddTodo()">+</button>
+</div>  
+<div class="allsingleTodo">
+<!-- <div class="singleToDoDiv">
+<input type="text">
+<button class="editButton"><i class="fa-regular fa-pen-to-square"></i></button>
+<button class="deleteButton"><i class="fa-solid fa-trash"></i></button>
+ <button class="doneButton"><i class="fa-solid fa-check"></i></button>
+    </div> -->
+</div>
+ <script src="js/index.js"></script>   
 </body>
 </html>
