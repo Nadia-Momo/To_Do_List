@@ -60,8 +60,7 @@ body{
 .todoHead button{
     width:40px;
     border:none;
-    font-size:20px;
-    
+    font-size:20px;   
 }
 .singleToDoDiv{
     width:600px;
