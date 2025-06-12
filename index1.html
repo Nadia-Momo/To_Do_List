@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Border Animation Examples</title>
+  <style>
+    body {
+      background: #1e1e1e;
+      font-family: sans-serif;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      padding: 50px;
+    }
+
+    /* 1. Hover Border Animation */
+    .button {
+      padding: 12px 24px;
+      border: 2px solid transparent;
+      border-image: linear-gradient(45deg, #f06, #4a90e2);
+      border-image-slice: 1;
+      background-color: #fff;
+      color: #333;
+      cursor: pointer;
+      transition: border 0.4s;
+    }
+
+    .button:hover {
+      border-image: linear-gradient(135deg, #4a90e2, #f06);
+      border-image-slice: 1;
+    }
+
+    /* 2. Animated Gradient Border */
+    .animated-border {
+      padding: 20px;
+      border: 5px solid;
+      border-image: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet) 1;
+      animation: borderMove 5s linear infinite;
+    }
+
+    @keyframes borderMove {
+      0% {
+        border-image-source: linear-gradient(0deg, red, orange, yellow, green, blue, indigo, violet);
+      }
+      100% {
+        border-image-source: linear-gradient(360deg, red, orange, yellow, green, blue, indigo, violet);
+      }
+    }
+
+    /* 3. Pseudo-element Animated Border */
+    .border-animate-box {
+      position: relative;
+      padding: 20px 40px;
+      background: #111;
+      overflow: hidden;
+      z-index: 1;
+      border: 2px solid transparent;
+    }
+
+    .border-animate-box::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      background: linear-gradient(90deg, #0ff, #f0f, #0ff);
+      animation: borderRotate 4s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes borderRotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="button">Hover Border</button>
+
+  <div class="animated-border">Animated Gradient Border</div>
+
+  <div class="border-animate-box">Pseudo-Element Border Animation</div>
+
+</body>
+</html>

@@ -1,0 +1,367 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background-image: url(../images/space.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    background-position: center;   
+}
+.toDoContainer{
+   background-color: rgb(196, 224, 229,0.1);
+     backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 20px;
+}
+.toDoParagraph{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+   z-index: 100;
+}
+.toDoParagraph h1{
+  color: white;
+}
+.toDoParagraph img{
+  width:50px;
+  height:50px;
+ z-index: 100;
+}
+.toDoHead{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+gap:100px;
+border:1px solid blue;
+border-radius: 5px;
+padding: 10px;
+}
+.counter{
+  background-image: linear-gradient( #f2f0ef, #0073cf);
+  color: white;
+  height:100px;
+  width:100px;
+  border-radius: 50%;
+  font-size: 25px;
+  z-index: 100;
+  font-weight: bold;
+}
+.counterHolder{
+ display:flex;
+  justify-content: center;
+  align-items: center;
+ height:100px;
+}
+/* From Uiverse.io by andrew-demchenk0 */ 
+.button {
+  position: relative;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid #0073cf;
+ 
+  background-image: linear-gradient( #f2f0ef, #0073cf);
+}
+/* 
+#00d2ff
+→ 
+#928dab */
+.button, .button__icon, .button__text {
+  transition: all 0.3s;
+}
+
+.button .button__text {
+  transform: translateX(30px);
+  color: #f2f0ef;
+  font-weight: 600;
+}
+
+.button .button__icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 39px;
+  background-image: linear-gradient( #f2f0ef, #0073cf);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* #f2f0ef
+👉🏽
+#0073cf */
+.button .svg {
+  width: 30px;
+  stroke: #0073cf;
+}
+
+.button:hover {
+ background-image: linear-gradient(#f2f0ef, #0073cf );
+}
+
+.button:hover .button__text {
+  color: transparent;
+}
+
+.button:hover .button__icon {
+  width: 148px;
+  transform: translateX(0);
+}
+
+.button:active .button__icon {
+background-image: linear-gradient(#f2f0ef, #0073cf );
+}
+
+.button:active {
+  border: 1px solid #0073cf;
+}
+.add_item{
+  margin-top:10px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+}
+.add_item input{
+  width:400px;
+  height:40px;
+  outline:none;
+  border:none;
+  background: transparent; 
+  border:1px solid blue;
+  border-radius: 10px;
+  color:gray;
+}
+.add_item input::placeholder{
+  padding-left: 10px;
+}
+/* edit button css */
+.editBtn {
+  width: 55px;
+  height: 55px;
+  border-radius: 20px;
+  border: none;
+  background-image: linear-gradient( #f2f0ef, #0073cf);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.123);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.editBtn::before {
+  content: "";
+  width: 200%;
+  height: 200%;
+ background-image: linear-gradient( #f2f0ef, #0073cf);
+  position: absolute;
+  z-index: 1;
+  transform: scale(0);
+  transition: all 0.3s;
+  border-radius: 50%;
+  filter: blur(10px);
+}
+.editBtn:hover::before {
+  transform: scale(1);
+}
+.editBtn:hover {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.336);
+}
+
+.editBtn svg {
+  height: 17px;
+  fill: white;
+  z-index: 3;
+  transition: all 0.2s;
+  transform-origin: bottom;
+}
+.editBtn:hover svg {
+  transform: rotate(-15deg) translateX(5px);
+}
+.editBtn::after {
+  content: "";
+  width: 25px;
+  height: 1.5px;
+  position: absolute;
+  bottom: 19px;
+  left: -5px;
+  background-color: white;
+  border-radius: 2px;
+  z-index: 2;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-out;
+}
+.editBtn:hover::after {
+  transform: scaleX(1);
+  left: 0px;
+  transform-origin: right;
+}
+/* delete button css *//* From Uiverse.io by vinodjangid07 */ 
+.bin-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+ background-image: linear-gradient( rgb(242, 240, 239), rgb(0, 115, 207));
+  cursor: pointer;
+  border: 2px solid rgb(242, 240, 239);
+  transition-duration: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.bin-bottom {
+  width: 15px;
+  z-index: 2;
+}
+.bin-top {
+  width: 17px;
+  transform-origin: right;
+  transition-duration: 0.3s;
+  z-index: 2;
+}
+.bin-button:hover .bin-top {
+  transform: rotate(45deg);
+}
+.bin-button:hover {
+  background-color: rgb(255, 0, 0);
+}
+.bin-button:active {
+  transform: scale(0.9);
+}
+.garbage {
+  position: absolute;
+  width: 14px;
+  height: auto;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.bin-button:hover .garbage {
+  animation: throw 0.4s linear;
+}
+@keyframes throw {
+  from {
+    transform: translate(-400%, -700%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
+/* done button */
+/* From Uiverse.io by boryanakrasteva */ 
+/* Customize the label (the checkbox-btn) */
+.checkbox-btn {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-btn input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-btn label {
+  cursor: pointer;
+  font-size: 14px;
+}
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border: 2.5px solid #ffffff;
+  transition: .2s linear;
+}
+.checkbox-btn input:checked ~ .checkmark {
+  background-color: transparent;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  left: 50%;
+  top: 40%;
+  width: 10px;
+  height: 14px;
+  border: 2px solid #0ea021;
+  filter: drop-shadow(0px 0px 10px #0ea021);
+  border-width: 0 2.5px 2.5px 0;
+  transition: .2s linear;
+  transform: translate(-50%, -50%) rotate(-90deg) scale(0.2);
+}
+
+/* Show the checkmark when checked */
+.checkbox-btn input:checked ~ .checkmark:after {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(0deg) scale(1);
+  animation: pulse 1s ease-in;
+}
+
+.checkbox-btn input:checked ~ .checkmark {
+  transform: rotate(45deg);
+  border: none;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(1.6);
+  }
+}
+.singleToDoDiv{
+ display:flex;
+gap:20px;
+border:1px solid blue;
+margin-top:10px;
+padding:5px;
+align-items: center;
+border-radius:15px;
+}
+.singleToDoDiv input{
+  width:400px;
+  height:50px;
+  background: transparent;
+  outline:none;
+  border:none;
+}
+
+
+
+
